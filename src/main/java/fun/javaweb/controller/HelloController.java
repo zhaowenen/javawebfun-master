@@ -3,6 +3,8 @@ package fun.javaweb.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * 框架搭建测试
  * @author 李幸
@@ -17,8 +19,9 @@ public class HelloController {
      * @return
      */
     @GetMapping("/")
-    public String hello(){
+    public String hello(HttpServletRequest request){
         //页面显示就成功了
+        request.setAttribute("data","后台数据");
         return "index";
     }
 }
