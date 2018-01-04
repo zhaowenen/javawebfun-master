@@ -1,0 +1,27 @@
+group 'fun.javaweb'
+version '1.0'
+
+// 应用Gradle插件
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+
+repositories {
+//    mavenCentral()
+    maven{
+        url("http://maven.aliyun.com/nexus/content/groups/public")
+    }
+}
+
+// 指定JDK版本
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+ext {
+    jvmVersion = "1.8"
+    springVersion = "4.0.6.RELEASE"
+    sl4jVersion = "1.7.6"
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
