@@ -1,9 +1,11 @@
 package fun.javaweb.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.sql.DataSource;
 
 /**
  * 框架搭建测试
@@ -14,6 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class HelloController {
 
+    @Autowired
+    DataSource dataSource;
     /**
      * 框架测试
      * @return
@@ -23,6 +27,7 @@ public class HelloController {
         //页面显示就成功了
         request.setAttribute("data","后台数据");
         request.setAttribute("name","carlzuishuai");
+        System.out.println(dataSource);
         return "index";
     }
 }

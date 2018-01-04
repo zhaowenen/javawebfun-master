@@ -7,6 +7,7 @@
 
     <!-- scan the package and the sub package -->
     <context:component-scan base-package="fun.javaweb.controller"/>
+    <context:component-scan base-package="fun.javaweb.common.config"/>
 
     <!-- don't handle the static resource -->
     <mvc:default-servlet-handler />
