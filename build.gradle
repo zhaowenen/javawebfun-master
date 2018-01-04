@@ -6,7 +6,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'war'
 repositories {
-    mavenCentral()
+//    mavenCentral()
     maven{
         url("http://maven.aliyun.com/nexus/content/groups/public")
     }
@@ -29,7 +29,7 @@ dependencies {
             "javax.servlet.jsp:jsp-api:2.2.1-b03"
     )
 
-    // Spring4.0.6依赖
+    // Spring4.3.7依赖
     compile("org.springframework:spring-aop:$springVersion",
             "org.springframework:spring-orm:$springVersion",
             "org.springframework:spring-jdbc:$springVersion",
