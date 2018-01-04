@@ -22,6 +22,7 @@ public class HelloController {
     public String hello(HttpServletRequest request){
         //页面显示就成功了
         request.setAttribute("data","后台数据");
+        request.setAttribute("name","carlzuishuai");
         return "index";
     }
 }
